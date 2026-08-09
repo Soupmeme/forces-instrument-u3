@@ -77,7 +77,8 @@ El repositorio ya incluye `.github/workflows/deploy.yml`.
 3. `src/simulation/createSimulation.js`: estado GPU, fuerzas, integración y render.
 4. `src/ui/labPanel.js`: controles del laboratorio y escenarios de exploración.
 
-Lee la `GUIA_ESTUDIANTE.md` para comprender la estructura del proyecto y cómo se relacionan los archivos.
+Lee la `GUIA_ESTUDIANTE.md` para comprender la estructura del proyecto y 
+cómo se relacionan los archivos.
 
 ## Documentación complementaria
 
