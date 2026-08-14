@@ -7,6 +7,8 @@ import { createParameters } from './simulation/parameters.js';
 import { createSimulation } from './simulation/createSimulation.js';
 import { createLabPanel } from './ui/labPanel.js';
 
+
+
 /*
 2^15: 32768
 2^16: 65536
