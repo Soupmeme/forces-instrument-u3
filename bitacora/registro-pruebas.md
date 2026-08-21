@@ -62,6 +62,22 @@ Las 5 pruebas base y el registro anterior solo comparan signo de radial (escenar
 
 **Comparación:** la predicción sobreestimó el jitter — el sistema es más estable de lo esperado incluso en el extremo del rango de `radialStrength`. Confirma que `softening` + `maxSpeed` juntos previenen la singularidad incluso al doble de la magnitud usada en el preset base. Sin drag activo (para no contaminar la prueba con otra fuerza), lo cual hace el resultado más contundente: ni siquiera sin amortiguación adicional el sistema se desestabiliza.
 
+## Prueba de integración: recorrido en vivo completo (PERFORMANCE, sin resets intermedios)
+
+Todas las pruebas anteriores empiezan desde un preset/reset limpio y prueban una fuerza a la vez. Nunca se había corrido la secuencia completa de teclas de interpretación en orden, sin reiniciar entre pasos — que es exactamente cómo se usaría en una interpretación real. Se ejecutó la secuencia completa del tramo-por-tramo (`controles.txt`) en modo PERFORMANCE, con capturas y consola revisadas en cada transición. Cuatro hallazgos reales, no cosméticos:
+
+**1. Los defaults al cargar/resetear no coinciden con el "reposo" inicial que pide la pieza.** Un load o Reset fresco deja Radial, Vórtice y Drag ya activados (`parameters.js`). El tramo 00:00–06 pide calma/silencio. Antes de empezar una interpretación real, hay que apagar Radial (`1`) y Vórtice+Drag (`3`) explícitamente — no basta con Reset solo.
+
+**2. Bug real encontrado y corregido: el toggle de Viento no hacía nada.** `wind.x` por defecto es 0 — activar `windEnabled` sin magnitud no produce ninguna fuerza. La tecla `2` quedaba silenciosamente sin efecto. Corregido en `src/main.js`: activar Viento ahora fija `wind.x = 1.5` directamente, ya que el diseño solo usa una dirección fija (no hacía falta agregar más teclas). Verificado tras el fix: la nube se desplaza claramente en +X.
+
+**3. Las transiciones en vivo se ven más lentas/suaves que las pruebas aisladas, por inercia acumulada.** Ejemplo: invertir el signo radial con Espacio después de una fase de atracción no abre un vacío limpio de inmediato como en la prueba aislada de repulsión — las partículas ya traían velocidad hacia adentro y hay que vencerla primero. No es un bug, es física esperada, pero cambia lo que se ve en vivo respecto a lo verificado en aislamiento. Vale la pena que Kiwi lo tenga en cuenta al ensayar: el tiempo de respuesta real es más largo que en el LAB.
+
+**4. La tecla `3` (Vórtice+Drag) no incluye el radial suave que sí tenía el preset de LAB verificado (escenario 5).** Si Radial está apagado cuando se presiona `3`, el resultado es vórtice puro sin nada que atraiga de vuelta al centro — un patrón de vacío-con-anillo, no el bloque girando coherente que se verificó y quedó documentado como "cualidad observada" en la ficha de fuerzas. Esa combinación específica (vórtice+drag sin radial) no está verificada por separado. Si el tramo 02:10–03:00 quiere el giro coherente ya visto, hace falta Radial también activo en ese momento, no solo la tecla `3`.
+
+**5. Apagar todas las fuerzas al final no produce silencio, solo deriva indefinida.** Sin Drag, la velocidad residual no se disipa — las partículas siguen moviéndose para siempre (con wraparound de frontera), nunca se detienen visualmente. Para que el final de la pieza realmente llegue a quietud, hay que dejar o volver a activar Drag solo (`Num 0`) al final, no apagarlo junto con todo lo demás. Verificado: con Drag solo activo tras apagar el resto, el color vuelve a azul (lento) y el movimiento decae visiblemente.
+
+Consola limpia durante todo el recorrido (solo mensajes de HMR de Vite, sin errores). `controles.txt` actualizado con estas correcciones.
+
 ## Resumen
 
 4 de 5 predicciones correctas en su idea central. Los dos matices a corregir antes de escribir la ficha de fuerzas final:
