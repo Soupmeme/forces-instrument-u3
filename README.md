@@ -92,13 +92,13 @@ cómo se relacionan los archivos.
 
 ## Autoevaluación ponderada
 
-Tabla de la rúbrica del curso, duplicada aquí para llenarla directamente. Columnas "Evidencia" y "Autoevaluación" en blanco, pendientes de completar.
+Tabla de la rúbrica del curso, duplicada aquí para llenarla directamente. Columna "Evidencia" completada con enlaces a los archivos correspondientes; columna "Autoevaluación" con los porcentajes de Kiwi.
 
 | Criterio | Peso | Qué exige la evidencia | Evidencia (enlaces) | Autoevaluación |
 |---|---|---|---|---|
-| Trazabilidad y comprensión del sistema | 25 | Explicar estado, fuerzas, integración, render, controles; ubicar qué produjo/modificó la IA | | |
-| Verificación del algoritmo de fuerzas | 25 | Aislar una fuerza central, predecir, ejecutar, comparar, cambiar signo/parámetro deliberadamente y explicar la diferencia | | |
-| Diseño de fuerzas e intención | 20 | El comportamiento hace perceptible una intención; emerge, no está dibujado | | |
-| Instrumento, score e interpretación | 15 | El score conecta escucha con decisiones; pocos controles expresivos; se conduce en vivo sin control automático por audio | | |
-| Experimentación y criterio frente a IA | 10 | Comparó alternativas, registró descartes, corrigió propuestas de IA | | |
-| Entrega técnica y documentación | 5 | URL abre; bitácora permite verificar el proceso | | |
+| Trazabilidad y comprensión del sistema | 25 | Explicar estado, fuerzas, integración, render, controles; ubicar qué produjo/modificó la IA | [Mapa del sistema](bitacora/mapa-sistema.md), [Ficha de fuerzas](bitacora/ficha-de-fuerzas.md) | 70 |
+| Verificación del algoritmo de fuerzas | 25 | Aislar una fuerza central, predecir, ejecutar, comparar, cambiar signo/parámetro deliberadamente y explicar la diferencia | [Registro de pruebas](bitacora/registro-pruebas.md) (5 escenarios base + drag aislado + radial en magnitud extrema + integración en vivo) | 100 |
+| Diseño de fuerzas e intención | 20 | El comportamiento hace perceptible una intención; emerge, no está dibujado | [Síntesis Fase 4](bitacora/sintesis-fase4-propuesta.md), [Vocabulario de fuerzas](bitacora/vocabulario-fuerzas.md), [Ficha de fuerzas](bitacora/ficha-de-fuerzas.md) | 100 |
+| Instrumento, score e interpretación | 15 | El score conecta escucha con decisiones; pocos controles expresivos; se conduce en vivo sin control automático por audio | [App desplegada](https://soupmeme.github.io/forces-instrument-u3/) (LAB y PERFORMANCE), [Controles y tabla de ensayo](bitacora/controles.txt), [Mapeo temporal](bitacora/mapeo-temporal-lesalpx.md) | 100 |
+| Experimentación y criterio frente a IA | 10 | Comparó alternativas, registró descartes, corrigió propuestas de IA | [Bitácora de IA](bitacora/bitacora-ia.md) | 100 |
+| Entrega técnica y documentación | 5 | URL abre; bitácora permite verificar el proceso | [App desplegada](https://soupmeme.github.io/forces-instrument-u3/), [Bitácora completa](bitacora/) | 100 |
