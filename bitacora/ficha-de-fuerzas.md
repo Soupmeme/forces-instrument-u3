@@ -12,7 +12,9 @@ Formaliza la dirección aprobada en `sintesis-fase4-propuesta.md`. Tres fuerzas,
 
 **Decisión de diseño:** representa la dualidad constricción/opresión ↔ apertura que domina la lectura de la pieza (Pasada B de `mapeo-temporal-lesalpx.md`). Es la fuerza que más tiempo está activa y la que el intérprete más manipula en vivo.
 
-**Pendiente:** el registro de pruebas actual solo compara signo (escenarios 3 vs. 4). Falta una prueba que aísle específicamente el comportamiento de radial en magnitudes extremas o con cambios de signo rápidos (relevante para la técnica de "respiración" descrita más abajo) — esto satisface mejor el requisito de rúbrica de una prueba específica de la fuerza central, más allá de las 5 base.
+**Prueba de magnitud extrema (verificada, `registro-pruebas.md`):** `radialStrength = 8.0` (máximo del slider) converge de forma rápida y estable a un cúmulo apretado, sin explosión ni partículas escapando, sostenido 24+ segundos. `softening` + `maxSpeed` previenen la singularidad que advierte `PRUEBAS_Y_DEPURACION.md`, incluso más establemente de lo predicho (se esperaba jitter visible, no apareció). Esto satisface el requisito de rúbrica de una prueba específica de la fuerza central, más allá de las 5 base.
+
+**Pendiente (menor):** no se ha probado el cambio de signo rápido y repetido (relevante para la técnica de "respiración" descrita más abajo) — esto es más una pregunta de viabilidad de interpretación en vivo que de estabilidad del sistema, se puede verificar directamente en ensayo con la música en vez de como prueba de laboratorio aislada.
 
 ## Viento — fuerza direccional
 

@@ -52,6 +52,16 @@ Ninguna de las 5 pruebas base aísla Drag solo — siempre aparece combinado (pr
 
 **Conclusión:** confirma la hipótesis. Drag no es solo fricción matemática abstracta, produce una amortiguación perceptible que lleva el sistema al reposo — coincide con "estabilidad" como cualidad perceptual, y respalda su uso propuesto para el tramo 02:10–03:00 ("sobria, muy sobria en dinámica musical") en `sintesis-fase4-propuesta.md`.
 
+## Prueba específica de la fuerza central: Radial en magnitud extrema
+
+Las 5 pruebas base y el registro anterior solo comparan signo de radial (escenarios 3 vs. 4, `radialStrength` = ±3.0). Esta prueba aísla radial en su magnitud máxima del slider (`radialStrength = 8.0`, más del doble del preset base) para verificar directamente la advertencia de `PRUEBAS_Y_DEPURACION.md`: *"Singularidad radial: las partículas explotan al acercarse al atractor. Revisa división por distancia y softening."*
+
+**Predicción (antes de ejecutar):** convergencia rápida y ajustada gracias a `softening = 0.35` (limita el crecimiento de la fuerza a corta distancia) y `maxSpeed = 5.0` (limita la velocidad). Se esperaba algo de jitter/sobrepaso visible por la integración discreta a fuerza alta, no una explosión limpia.
+
+**Observado:** convergencia casi instantánea (~1s) a un cúmulo más apretado que el radio del helper del atractor (0.12 unidades) — sin fuerza visible de dispersión, sin partículas escapando. Verificado con zoom de cámara progresivo (hasta llenar la mitad de la pantalla con la esfera del atractor) que no hay halo de partículas asomando detrás de la esfera. Sostenido así durante 24+ segundos sin degradarse, sin partículas dispersas en la vista amplia, consola sin errores.
+
+**Comparación:** la predicción sobreestimó el jitter — el sistema es más estable de lo esperado incluso en el extremo del rango de `radialStrength`. Confirma que `softening` + `maxSpeed` juntos previenen la singularidad incluso al doble de la magnitud usada en el preset base. Sin drag activo (para no contaminar la prueba con otra fuerza), lo cual hace el resultado más contundente: ni siquiera sin amortiguación adicional el sistema se desestabiliza.
+
 ## Resumen
 
 4 de 5 predicciones correctas en su idea central. Los dos matices a corregir antes de escribir la ficha de fuerzas final:
