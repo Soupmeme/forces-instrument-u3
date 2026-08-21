@@ -1,11 +1,11 @@
-CONTROLES — U3 FUERZAS INSTRUMENT
+CONTROLES - U3 FUERZAS INSTRUMENT
 ==================================
 
 NOTA GENERAL (probado en vivo, recorrido completo sin resets):
 las transiciones se sienten mas lentas/suaves de lo que viste en
 las pruebas aisladas del LAB, porque las particulas ya traen
 velocidad de la fase anterior y hay que vencerla primero. No es
-un error, es fisica esperada — solo que el tiempo de respuesta
+un error, es fisica esperada - solo que el tiempo de respuesta
 real en vivo es mas largo que en una prueba desde cero.
 
 FUERZAS (toggle on/off, no reinician la simulacion)
@@ -22,7 +22,7 @@ PARAMETROS (numpad)
   Num 2      radialStrength bajar  (0.3 por pulsacion, piso -8.0)
   Num 0      Drag       on/off  (independiente de la tecla 3)
 
-RADIAL — signo
+RADIAL - signo
   Espacio (mantener presionado)   invierte el signo de radial
                                   (atraccion <-> repulsion)
                                   al soltar, vuelve al signo anterior
@@ -41,17 +41,16 @@ Ver bitacora/sintesis-fase4-propuesta.md para el mapeo
 tramo-por-tramo de la cancion a estas fuerzas.
 
 
-TABLA DE ENSAYO — LesAlpx, tramo por tramo
+TABLA DE ENSAYO - LesAlpx, tramo por tramo
 ============================================
 
 ANTES DE EMPEZAR (importante, probado en vivo):
   El default al cargar/resetear deja Radial, Vortice y Drag YA
   encendidos. Presiona 1 y 3 justo despues de R para apagarlos
-  antes de arrancar — si no, el tramo inicial no suena a reposo.
+  antes de arrancar - si no, el tramo inicial no suena a reposo.
 
 00:00-00:06
-  Que hacer:  Reset (R), luego apagar Radial (1) y Vortice+Drag (3)
-              — ver nota arriba, no es el estado por defecto real
+  Que hacer:  Reset (R), luego apagar Radial (1) y Vortice+Drag (3) - ver nota arriba, no es el estado por defecto real
   Lectura:    chord solitario, bajo leve
 
 00:35-00:50
@@ -68,8 +67,7 @@ ANTES DE EMPEZAR (importante, probado en vivo):
   Lectura:    fluye... como si fuese un rio
 
 02:10-03:00
-  Que hacer:  Vortice+Drag ON (tecla 3) Y Radial ON (tecla 1) —
-              probado en vivo: si Radial esta apagado, vortice
+  Que hacer:  Vortice+Drag ON (tecla 3) Y Radial ON (tecla 1) - probado en vivo: si Radial esta apagado, vortice
               solo no gira coherente, deja un vacio con anillo,
               no es lo mismo que se verifico en el LAB
   Lectura:    etereo, muy abierta, sobria... bailando en una
@@ -79,7 +77,7 @@ ANTES DE EMPEZAR (importante, probado en vivo):
   Que hacer:  Radial ON de nuevo (tecla 1), Num 8 varias veces para
               subir radialStrength. Para el final: apagar Radial (1)
               y Vortice+Drag (3), pero DEJAR o volver a prender Drag
-              solo (Num 0) al final — probado en vivo: sin Drag, las
+              solo (Num 0) al final - probado en vivo: sin Drag, las
               particulas nunca se detienen, solo derivan sin fin.
               Drag solo es lo que realmente lleva a silencio.
   Lectura:    las paredes se cierran... hasta silencio,
@@ -87,5 +85,5 @@ ANTES DE EMPEZAR (importante, probado en vivo):
 
 ------------------------------------------------------------
 Vortice no tiene tramo propio fuera del 02:10-03:00 en esta
-version — no aparece en la lectura de Kiwi en ningun otro
+version - no aparece en la lectura de Kiwi en ningun otro
 punto de la pieza (ver sintesis-fase4-propuesta.md).

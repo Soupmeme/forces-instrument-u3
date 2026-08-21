@@ -1,14 +1,14 @@
-# Mapeo temporal — LesAlpx (Floating Points)
+# Mapeo temporal - LesAlpx (Floating Points)
 
-Dos pasadas (no tres): Pasada B absorbió el foco de energía/dinámica que originalmente iba en una Pasada C separada, por decisión de Kiwi — textura y energía no se pueden describir por separado en esta pieza, son la misma experiencia sensorial.
+Dos pasadas (no tres): Pasada B absorbió el foco de energía/dinámica que originalmente iba en una Pasada C separada, por decisión de Kiwi - textura y energía no se pueden describir por separado en esta pieza, son la misma experiencia sensorial.
 
-**Convención de vacíos:** la ausencia de una marca entre dos timestamps no es un vacío de datos. Significa que lo descrito en el timestamp anterior se mantuvo sin cambio perceptible hasta el siguiente — no hubo nada que ameritara una marca propia.
+**Convención de vacíos:** la ausencia de una marca entre dos timestamps no es un vacío de datos. Significa que lo descrito en el timestamp anterior se mantuvo sin cambio perceptible hasta el siguiente - no hubo nada que ameritara una marca propia.
 
 **Final de la pieza:** confirmado, la pieza termina en silencio real. Último tramo: un repunte final de energía, seguido de los elementos apagándose uno por uno hasta silencio completo (~04:42).
 
 ---
 
-## Pasada A — Macro-estructura
+## Pasada A - Macro-estructura
 
 Foco: las secciones grandes (intro, construcción, quiebre, respiro, cierre, lo que sea que haga la pieza realmente) y los puntos donde una se convierte en otra.
 
@@ -26,9 +26,9 @@ Foco: las secciones grandes (intro, construcción, quiebre, respiro, cierre, lo 
 
 ---
 
-## Pasada B — Textura / timbre (incluye energía/dinámica)
+## Pasada B - Textura / timbre (incluye energía/dinámica)
 
-Foco: qué entra, qué sale, qué cambia de carácter — junto con la sensación de energía/dinámica, que Kiwi describe como inseparable de la textura en esta pieza.
+Foco: qué entra, qué sale, qué cambia de carácter - junto con la sensación de energía/dinámica, que Kiwi describe como inseparable de la textura en esta pieza.
 
 ```
 00:00 a 00:06 Un chord soliutario entra a ser acompanado por un bajo leve y un hat a ritmo
