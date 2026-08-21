@@ -1,6 +1,8 @@
 # Bitácora de IA
 
-Registro de las decisiones de diseño reales tomadas junto con asistencia de IA a lo largo del proyecto: qué se propuso, qué se aceptó, qué se corrigió y por qué, qué se rechazó. No incluye trabajo de infraestructura rutinario (clonar, instalar, hacer commits) salvo cuando ese trabajo reveló un problema real que cambió una decisión. Borrador - las etiquetas Aceptado/Corregido/Rechazado reflejan mi lectura de lo ocurrido; Kiwi debe confirmarlas o ajustarlas, es su criterio el que cuenta para la rúbrica, no el mío.
+Registro de las decisiones de diseño reales tomadas junto con asistencia de IA a lo largo del proyecto: qué se propuso, qué se aceptó, qué se corrigió y por qué, qué se rechazó. No incluye trabajo de infraestructura rutinario (clonar, instalar, hacer commits) salvo cuando ese trabajo reveló un problema real que cambió una decisión.
+
+**Revisado y confirmado por Kiwi, entrada por entrada, el 2026-08-21.** Todas las etiquetas Aceptado/Corregido/Rechazado fueron confirmadas directamente por ella, no son solo la lectura de la IA.
 
 ## Fase 1-2 - Escucha y referentes: la IA no genera contenido interpretativo
 
