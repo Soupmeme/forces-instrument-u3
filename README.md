@@ -88,3 +88,17 @@ cómo se relacionan los archivos.
 
 - [Guía del estudiante](GUIA_ESTUDIANTE.md)
 - [Validación y depuración](PRUEBAS_Y_DEPURACION.md)
+- [Bitácora del proyecto](bitacora/) (mapa del sistema, registro de pruebas, mapeo temporal, referentes, vocabulario de fuerzas, síntesis, ficha de fuerzas, controles, bitácora de IA)
+
+## Autoevaluación ponderada
+
+Tabla de la rúbrica del curso, duplicada aquí para llenarla directamente. Columnas "Evidencia" y "Autoevaluación" en blanco, pendientes de completar.
+
+| Criterio | Peso | Qué exige la evidencia | Evidencia (enlaces) | Autoevaluación |
+|---|---|---|---|---|
+| Trazabilidad y comprensión del sistema | 25 | Explicar estado, fuerzas, integración, render, controles; ubicar qué produjo/modificó la IA | | |
+| Verificación del algoritmo de fuerzas | 25 | Aislar una fuerza central, predecir, ejecutar, comparar, cambiar signo/parámetro deliberadamente y explicar la diferencia | | |
+| Diseño de fuerzas e intención | 20 | El comportamiento hace perceptible una intención; emerge, no está dibujado | | |
+| Instrumento, score e interpretación | 15 | El score conecta escucha con decisiones; pocos controles expresivos; se conduce en vivo sin control automático por audio | | |
+| Experimentación y criterio frente a IA | 10 | Comparó alternativas, registró descartes, corrigió propuestas de IA | | |
+| Entrega técnica y documentación | 5 | URL abre; bitácora permite verificar el proceso | | |
