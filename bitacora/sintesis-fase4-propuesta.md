@@ -1,6 +1,6 @@
-# Síntesis Fase 4 — propuesta de dirección (borrador, sin aprobar)
+# Síntesis Fase 4 — dirección elegida
 
-Esto es una lectura mía, no una decisión. Cruza `mapeo-temporal-lesalpx.md` con lo verificado en `registro-pruebas.md`. Pendiente de que Kiwi la confirme, ajuste, o rechace antes de que cuente como dirección elegida (§11 del handoff).
+**Aprobada por Kiwi el 2026-08-21**, tras revisión y una corrección real (ver más abajo). Cruza `mapeo-temporal-lesalpx.md` con lo verificado en `registro-pruebas.md`. Esta es ahora la dirección de diseño (§11 del handoff) — Fase 5 (Convergencia) empieza a partir de aquí.
 
 ## Patrón dominante en la propia lectura de Kiwi
 
