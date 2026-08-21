@@ -1,0 +1,32 @@
+CONTROLES — U3 FUERZAS INSTRUMENT
+==================================
+
+FUERZAS (toggle on/off, no reinician la simulacion)
+  1          Radial          on/off
+  2          Viento          on/off
+  3          Vortice + Drag  on/off (juntos)
+
+PARAMETROS (numpad)
+  Num +      timeScale  subir   (0.1 por pulsacion, tope 2.0)
+  Num -      timeScale  bajar   (0.1 por pulsacion, piso 0.0)
+  Num *      drag       subir   (0.02 por pulsacion, tope 1.0)
+  Num /      drag       bajar   (0.02 por pulsacion, piso 0.0)
+  Num 0      Drag       on/off  (independiente de la tecla 3)
+
+RADIAL — signo
+  Espacio (mantener presionado)   invierte el signo de radial
+                                  (atraccion <-> repulsion)
+                                  al soltar, vuelve al signo anterior
+
+GENERAL
+  P          LAB / PERFORMANCE
+  R          Reset (reinicia posiciones)
+  Puntero    mueve el atractor (arrastrar)
+
+------------------------------------------------------------
+Defaults al reset: Radial ON, Vortice ON, Drag ON, Viento OFF
+timeScale 1.0, dragCoefficient 0.12, radialStrength 2.2
+------------------------------------------------------------
+
+Ver bitacora/sintesis-fase4-propuesta.md para el mapeo
+tramo-por-tramo de la cancion a estas fuerzas.
