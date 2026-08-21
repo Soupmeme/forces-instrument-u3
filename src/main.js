@@ -123,8 +123,8 @@ async function main() {
     attractorHelper.visible = lab;
     //orbit.enabled = lab;
     hud.innerHTML = lab
-      ? '<strong>LAB</strong> · P: performance · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial'
-      : '<strong>PERFORMANCE</strong> · P: lab · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial · puntero: atractor';
+      ? '<strong>LAB</strong> · P: performance · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial · num +/-: timeScale · num */÷: drag · num 0: drag on/off'
+      : '<strong>PERFORMANCE</strong> · P: lab · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial · puntero: atractor · num +/-: timeScale · num */÷: drag · num 0: drag on/off';
   };
 
   panel = createLabPanel({
@@ -164,6 +164,30 @@ async function main() {
       const on = params.vortexEnabled.value > 0 ? 0 : 1;
       params.vortexEnabled.value = on;
       params.dragEnabled.value = on;
+      panel?.refresh();
+    }
+
+    // NUMPAD — continuous parameter nudges + independent drag toggle.
+    // Separate event.code namespace from Digit1-9, so no collision with
+    // the force-toggle keys above even on a full keyboard.
+    if (event.code === 'NumpadAdd') {
+      params.timeScale.value = Math.min(2, params.timeScale.value + 0.1);
+      panel?.refresh();
+    }
+    if (event.code === 'NumpadSubtract') {
+      params.timeScale.value = Math.max(0, params.timeScale.value - 0.1);
+      panel?.refresh();
+    }
+    if (event.code === 'NumpadMultiply') {
+      params.dragCoefficient.value = Math.min(1, params.dragCoefficient.value + 0.02);
+      panel?.refresh();
+    }
+    if (event.code === 'NumpadDivide') {
+      params.dragCoefficient.value = Math.max(0, params.dragCoefficient.value - 0.02);
+      panel?.refresh();
+    }
+    if (event.code === 'Numpad0') {
+      params.dragEnabled.value = params.dragEnabled.value > 0 ? 0 : 1;
       panel?.refresh();
     }
 
