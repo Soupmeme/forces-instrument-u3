@@ -157,7 +157,12 @@ async function main() {
       panel?.refresh();
     }
     if (event.code === 'Digit2') {
-      params.windEnabled.value = params.windEnabled.value > 0 ? 0 : 1;
+      const on = params.windEnabled.value > 0 ? 0 : 1;
+      params.windEnabled.value = on;
+      // wind.x defaults to 0 — enabling the flag alone does nothing without
+      // a magnitude. Ficha de fuerzas only uses wind in one fixed direction
+      // (+X, "río"), so the toggle sets it directly instead of adding more keys.
+      if (on) params.wind.value.x = 1.5;
       panel?.refresh();
     }
     if (event.code === 'Digit3') {
