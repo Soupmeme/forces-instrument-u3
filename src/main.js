@@ -123,8 +123,8 @@ async function main() {
     attractorHelper.visible = lab;
     //orbit.enabled = lab;
     hud.innerHTML = lab
-      ? '<strong>LAB</strong> · P: performance · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial · num +/-: timeScale · num */÷: drag · num 0: drag on/off'
-      : '<strong>PERFORMANCE</strong> · P: lab · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial · puntero: atractor · num +/-: timeScale · num */÷: drag · num 0: drag on/off';
+      ? '<strong>LAB</strong> · P: performance · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial · num +/-: timeScale · num */÷: drag · num 8/2: radialStrength · num 0: drag on/off'
+      : '<strong>PERFORMANCE</strong> · P: lab · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial · puntero: atractor · num +/-: timeScale · num */÷: drag · num 8/2: radialStrength · num 0: drag on/off';
   };
 
   panel = createLabPanel({
@@ -184,6 +184,14 @@ async function main() {
     }
     if (event.code === 'NumpadDivide') {
       params.dragCoefficient.value = Math.max(0, params.dragCoefficient.value - 0.02);
+      panel?.refresh();
+    }
+    if (event.code === 'Numpad8') {
+      params.radialStrength.value = Math.min(8, params.radialStrength.value + 0.3);
+      panel?.refresh();
+    }
+    if (event.code === 'Numpad2') {
+      params.radialStrength.value = Math.max(-8, params.radialStrength.value - 0.3);
       panel?.refresh();
     }
     if (event.code === 'Numpad0') {
