@@ -41,6 +41,22 @@ Formaliza la dirección aprobada en `sintesis-fase4-propuesta.md`. Tres fuerzas,
 
 **"Respiración" / acumulación hasta parar de golpe** (02:00–02:07, "el timbre... se acumula hasta parar de manera abrupta"): se aborda como técnica de interpretación sobre el radial existente — conducir la magnitud o el signo rítmicamente a mano — no como fuerza nueva con ecuación propia (decisión explícita según §6 del handoff). Si esto se siente insuficiente en la práctica, memoria/histéresis (extensión D de `vocabulario-fuerzas.md`) es la candidata a reconsiderar, pero no se implementa sin antes intentarlo como técnica.
 
+## Controles de interpretación (implementado, `src/main.js`)
+
+El mapeo de teclado base del repo (`1`-`5` disparaban presets de LAB, reiniciando la simulación cada vez) no servía para tocar en vivo — reiniciar la posición de las partículas en medio de una interpretación rompe la continuidad. Se reemplazó por llaves dedicadas al instrumento, cada una activa/desactiva una fuerza en el lugar donde el sistema ya está, sin reset:
+
+| Tecla | Acción | Nota |
+|---|---|---|
+| `1` | Activa/desactiva Radial | Independiente, no reinicia posiciones |
+| `2` | Activa/desactiva Viento | Independiente, no reinicia posiciones |
+| `3` | Activa/desactiva Vórtice + Drag juntos | Una sola tecla para el par, coincide con la decisión de diseño de usarlos siempre combinados |
+| `Espacio` (mantener) | Invierte el signo de radial mientras se mantiene presionada | Sin cambios respecto al mapeo base |
+| `P` | LAB / PERFORMANCE | Sin cambios |
+| `R` | Reset | Sin cambios |
+| Puntero (arrastrar) | Mueve el atractor | Brush existente, sin cambios |
+
+Verificado en LAB y PERFORMANCE: las tres teclas son independientes entre sí (se pueden combinar), no reinician el estado de partículas al presionarse, y los checkboxes del panel LAB reflejan el estado en tiempo real (`panel?.refresh()`). Probado además en modo PERFORMANCE con el panel oculto — funcionan igual.
+
 ## Siguiente paso
 
 Esto es la ficha, no el ensayo. El paso real ahora es que Kiwi pruebe esta asignación en vivo — LAB o PERFORMANCE, con la pieza sonando, siguiendo la tabla tramo-por-tramo de `sintesis-fase4-propuesta.md` como guía — y vea si se siente correcto en la práctica, no solo en el papel. Lo que no funcione en el ensayo se corrige aquí después, no se asume que esta ficha es la versión final.
