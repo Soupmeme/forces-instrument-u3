@@ -92,7 +92,6 @@ cómo se relacionan los archivos.
 
 ## Autoevaluación ponderada
 
-Tabla de la rúbrica del curso, duplicada aquí para llenarla directamente. Columna "Evidencia" completada con enlaces a los archivos correspondientes; columna "Autoevaluación" con los porcentajes de Kiwi.
 
 | Criterio | Peso | Qué exige la evidencia | Evidencia (enlaces) | Autoevaluación |
 |---|---|---|---|---|
