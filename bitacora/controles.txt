@@ -30,3 +30,49 @@ timeScale 1.0, dragCoefficient 0.12, radialStrength 2.2
 
 Ver bitacora/sintesis-fase4-propuesta.md para el mapeo
 tramo-por-tramo de la cancion a estas fuerzas.
+
+
+TABLA DE ENSAYO — LesAlpx, tramo por tramo
+============================================
+
+00:00-00:06
+  Que hacer:  Radial casi apagado, reposo (default al reset)
+  Lectura:    chord solitario, bajo leve
+
+00:35-00:50
+  Que hacer:  Radial ON (tecla 1), signo + (default, sin tocar Espacio)
+  Lectura:    tension aumenta... mas metalico, opresivo
+  [nota: pide magnitud creciendo — sin key para eso todavia, ver abajo]
+
+00:50-01:14
+  Que hacer:  Mantener Espacio (invierte a repulsion) mientras dura el tramo
+  Lectura:    el build-up se disipa, la pieza se abre
+
+01:15-01:55
+  Que hacer:  Radial OFF (tecla 1), Viento ON (tecla 2)
+  Lectura:    fluye... como si fuese un rio
+
+02:10-03:00
+  Que hacer:  Radial OFF, Vortice+Drag ON (tecla 3)
+  Lectura:    etereo, muy abierta, sobria... bailando en una
+              discoteca llena de humo con las luces apagadas
+
+04:24-04:42
+  Que hacer:  Radial ON de nuevo (tecla 1), luego apagar todo
+              una por una hacia el final
+  Lectura:    las paredes se cierran... hasta silencio,
+              el bajo el ultimo en irse
+  [nota: pide magnitud creciendo — mismo pendiente que arriba]
+
+------------------------------------------------------------
+PENDIENTE: dos tramos (00:35-50 y 04:24-42) piden que
+radialStrength crezca con el tiempo, no solo on/off. Ahora
+mismo esa magnitud solo se controla desde el slider del panel
+LAB (no disponible en PERFORMANCE). Si hace falta en vivo,
+se puede agregar un par de teclas numpad para radialStrength
+igual que las de timeScale/drag — pendiente de pedirlo.
+------------------------------------------------------------
+
+Vortice no tiene tramo propio fuera del 02:10-03:00 en esta
+version — no aparece en la lectura de Kiwi en ningun otro
+punto de la pieza (ver sintesis-fase4-propuesta.md).
