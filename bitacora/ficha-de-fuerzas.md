@@ -54,8 +54,11 @@ El mapeo de teclado base del repo (`1`-`5` disparaban presets de LAB, reiniciand
 | `P` | LAB / PERFORMANCE | Sin cambios |
 | `R` | Reset | Sin cambios |
 | Puntero (arrastrar) | Mueve el atractor | Brush existente, sin cambios |
+| `Num +` / `Num −` | `timeScale` ±0.1 | Rango 0–2, con clamp verificado en ambos extremos |
+| `Num *` / `Num /` | `dragCoefficient` ±0.02 | Rango 0–1, con clamp verificado en ambos extremos |
+| `Num 0` | Activa/desactiva Drag, independiente de `3` | Permite separar drag de vórtice — vórtice puede girar sin amortiguar, algo fuera del plan original de "siempre combinados" |
 
-Verificado en LAB y PERFORMANCE: las tres teclas son independientes entre sí (se pueden combinar), no reinician el estado de partículas al presionarse, y los checkboxes del panel LAB reflejan el estado en tiempo real (`panel?.refresh()`). Probado además en modo PERFORMANCE con el panel oculto — funcionan igual.
+Verificado en LAB y PERFORMANCE: todas las teclas son independientes entre sí (se pueden combinar), no reinician el estado de partículas al presionarse, los checkboxes/sliders del panel LAB reflejan el estado en tiempo real (`panel?.refresh()`), y los límites (`timeScale` 0-2, `dragCoefficient` 0-1) quedan correctamente saturados sin desbordarse. Probado además en modo PERFORMANCE con el panel oculto — funcionan igual. Las teclas numpad usan un namespace de `event.code` distinto al de `Digit1-3` (`NumpadAdd` vs. `Digit1`, etc.), así que ambos conjuntos funcionan simultáneamente en un teclado completo sin colisión.
 
 ## Siguiente paso
 
