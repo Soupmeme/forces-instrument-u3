@@ -55,6 +55,7 @@ El mapeo de teclado base del repo (`1`-`5` disparaban presets de LAB, reiniciand
 | `R` | Reset | Sin cambios |
 | Puntero (arrastrar) | Mueve el atractor | Brush existente, sin cambios |
 | `Num +` / `Num −` | `timeScale` ±0.1 | Rango 0–2, con clamp verificado en ambos extremos |
+| `Num 8` / `Num 2` | `radialStrength` ±0.3 | Rango −8 a 8, con clamp verificado en ambos extremos. Cierra el pendiente de magnitud radial en vivo — también permite cruzar por cero gradualmente como alternativa a la inversión instantánea de `Espacio` |
 | `Num *` / `Num /` | `dragCoefficient` ±0.02 | Rango 0–1, con clamp verificado en ambos extremos |
 | `Num 0` | Activa/desactiva Drag, independiente de `3` | Permite separar drag de vórtice — vórtice puede girar sin amortiguar, algo fuera del plan original de "siempre combinados" |
 
