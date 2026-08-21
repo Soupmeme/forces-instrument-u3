@@ -99,11 +99,17 @@ export function createSimulation({ renderer, scene, params, count = 131072 }) {
   material.scaleNode = params.particleSize;
 
   material.colorNode = Fn(() => {
+    // 3-stop gradient (indigo -> teal -> gold) instead of a single lerp,
+    // evoking an oil-on-water palette (LesAlpx cover art reference) rather
+    // than a plain heat-map blue-to-orange.
     const speed = velocityBuffer.toAttribute().length();
     const t = speed.div(params.maxSpeed).clamp(0.0, 1.0);
-    const slow = color('#46a6ff');
-    const fast = color('#ffb35a');
-    return vec4(mix(slow, fast, t), 1.0);
+    const slow = color('#2d1f6b');
+    const mid = color('#2ec9c2');
+    const fast = color('#f0c14b');
+    const lowHalf = mix(slow, mid, t.mul(2.0).clamp(0.0, 1.0));
+    const highHalf = mix(mid, fast, t.sub(0.5).mul(2.0).clamp(0.0, 1.0));
+    return vec4(mix(lowHalf, highHalf, step(0.5, t)), 1.0);
   })();
 
   // Circular sprite mask, avoiding visible square planes.
