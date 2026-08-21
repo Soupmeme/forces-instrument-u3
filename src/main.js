@@ -123,9 +123,8 @@ async function main() {
     attractorHelper.visible = lab;
     //orbit.enabled = lab;
     hud.innerHTML = lab
-      ? '<strong>LAB</strong> · P: performance · R: reset · 1–5: pruebas'
-      //: '<strong>PERFORMANCE</strong> · P: lab · espacio: invertir radial · puntero: atractor';
-      : '';
+      ? '<strong>LAB</strong> · P: performance · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial'
+      : '<strong>PERFORMANCE</strong> · P: lab · R: reset · 1: radial · 2: viento · 3: vórtice+drag · espacio: invertir radial · puntero: atractor';
   };
 
   panel = createLabPanel({
@@ -148,11 +147,25 @@ async function main() {
     if (event.repeat) return;
     if (event.code === 'KeyP') setMode(mode === 'LAB' ? 'PERFORMANCE' : 'LAB');
     if (event.code === 'KeyR') simulation.reset();
-    if (event.code === 'Digit1') applyPreset('inertia');
-    if (event.code === 'Digit2') applyPreset('wind');
-    if (event.code === 'Digit3') applyPreset('attract');
-    if (event.code === 'Digit4') applyPreset('repel');
-    if (event.code === 'Digit5') applyPreset('vortex');
+
+    // LIVE INSTRUMENT KEYS — toggle each force on/off in place, no reset,
+    // so they stay independently composable while the system keeps reacting
+    // from wherever it already is. Ficha de fuerzas: radial = central duality,
+    // viento = flowing section, vórtice+drag = circulating section (paired key).
+    if (event.code === 'Digit1') {
+      params.radialEnabled.value = params.radialEnabled.value > 0 ? 0 : 1;
+      panel?.refresh();
+    }
+    if (event.code === 'Digit2') {
+      params.windEnabled.value = params.windEnabled.value > 0 ? 0 : 1;
+      panel?.refresh();
+    }
+    if (event.code === 'Digit3') {
+      const on = params.vortexEnabled.value > 0 ? 0 : 1;
+      params.vortexEnabled.value = on;
+      params.dragEnabled.value = on;
+      panel?.refresh();
+    }
 
     if (event.code === 'Space') {
       event.preventDefault();
